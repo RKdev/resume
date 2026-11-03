@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>James Keys · Platform / DevOps Engineer</title>
+<meta name="description" content="James Keys: platform and infrastructure engineer. Kubernetes, GCP, Go and data pipelines, from server racks to cloud platforms.">
+<meta property="og:title" content="James Keys · Platform / DevOps Engineer">
+<meta property="og:description" content="Kubernetes · GCP · Go · Data Pipelines. From server racks to cloud platforms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0B1220;
+  --panel: #111A2C;
+  --line: #1E2A40;
+  --text: #E6EDF3;
+  --muted: #9AAABE;
+  --accent: #38BDF8;
+  --grid: rgba(120,160,200,0.06);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 44px 44px;
+  color: var(--text);
+  font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 56px 20px 72px; }
+.mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+header { margin-bottom: 40px; }
+.prompt { color: var(--accent); font-size: 15px; margin: 0 0 10px; }
+h1 { font-size: clamp(34px, 6vw, 48px); line-height: 1.1; margin: 0; letter-spacing: -0.02em; }
+.role { font-size: clamp(18px, 3vw, 22px); font-weight: 600; margin: 8px 0 4px; }
+.stack { color: #C9D4E1; font-size: 15px; margin: 0 0 18px; }
+.contact { display: flex; flex-wrap: wrap; gap: 8px 20px; color: var(--muted); font-size: 15px; }
+.actions { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px; }
+.btn {
+  display: inline-block; padding: 10px 16px; border: 1px solid var(--accent); border-radius: 6px;
+  font-size: 14px; font-weight: 500; min-height: 44px; line-height: 22px;
+}
+.btn:hover { background: rgba(56,189,248,0.1); text-decoration: none; }
+
+section { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 28px; margin-bottom: 20px; }
+h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin: 0 0 16px; font-weight: 600; }
+p { margin: 0; }
+
+.skills { display: grid; grid-template-columns: 180px 1fr; gap: 8px 20px; margin: 0; }
+.skills dt { font-weight: 600; }
+.skills dd { margin: 0; color: #C9D4E1; }
+
+.org { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline; }
+.org h3 { font-size: 18px; margin: 0; }
+.meta { color: var(--muted); font-size: 14px; }
+.job { margin-top: 18px; }
+.job-title { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 16px; font-weight: 600; }
+.job-title .meta { font-weight: 400; }
+ul { margin: 10px 0 0; padding-left: 20px; }
+li { margin: 6px 0; color: #D4DDE8; }
+li::marker { color: var(--accent); }
+.org + .org, .job-group + .job-group { margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--line); }
+
+footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 32px; }
+
+@media (max-width: 600px) {
+  .wrap { padding-top: 36px; }
+  section { padding: 20px 18px; }
+  .skills { grid-template-columns: 1fr; gap: 2px; }
+  .skills dd { margin-bottom: 10px; }
+}
+
+@media print {
+  body { background: #fff; color: #111; font-size: 11pt; }
+  .wrap { padding: 0; max-width: none; }
+  section { background: none; border: none; padding: 0; margin-bottom: 14pt; }
+  .actions, footer, .prompt { display: none; }
+  a { color: #111; }
+  h2 { color: #111; }
+  li, .skills dd, .stack { color: #222; }
+  .meta, .contact { color: #444; }
+  li::marker { color: #111; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="prompt mono">$ whoami</p>
+  <h1>James Keys</h1>
+  <p class="role">Platform &amp; Infrastructure Engineer</p>
+  <p class="stack mono">Kubernetes · GCP · Go · Data Pipelines</p>
+  <div class="contact">
+    <span>Johnson City, TN · open to remote</span>
+    <a href="mailto:keys@novelbusiness.llc">keys@novelbusiness.llc</a>
+    <a href="https://www.linkedin.com/in/james-keys-6a926570">LinkedIn</a>
+    <a href="https://github.com/RKdev">GitHub</a>
+  </div>
+  <div class="actions">
+    <a class="btn" href="mailto:keys@novelbusiness.llc">Get in touch</a>
+    <a class="btn" href="https://www.linkedin.com/in/james-keys-6a926570">View LinkedIn</a>
+  </div>
+</header>
+
+<section aria-labelledby="summary">
+  <h2 id="summary">Summary</h2>
+  <p>Platform and infrastructure engineer with 20 years in technology, from server racks to cloud-native platforms. Spent eight years as the one-person ops function at a healthcare video-interpreting startup: bootstrapped its Kubernetes platform on GCP, ran production through a private-cluster rebuild, a SOC 2 effort and a four-cluster fleet, and built its ELT data platform. Writes the code too, mainly backend services in Go. Lately building AI-assisted engineering workflows with Claude Code.</p>
+</section>
+
+<section aria-labelledby="skills">
+  <h2 id="skills">Skills</h2>
+  <dl class="skills">
+    <dt>Platform</dt><dd>Kubernetes (GKE), Docker, Helm, NGINX ingress, cert-manager, Prometheus, Grafana, Linux</dd>
+    <dt>Google Cloud</dt><dd>GKE, Cloud SQL, L7 load balancing, Cloud Armor, Identity-Aware Proxy, Compute Engine</dd>
+    <dt>Data</dt><dd>Airbyte, BigQuery, dbt, PostgreSQL, Redis, SQL</dd>
+    <dt>Languages</dt><dd>Go, Bash, SQL, JavaScript (Vue), PowerShell</dd>
+    <dt>Security</dt><dd>SOC 2 infrastructure controls, WAF and rate limiting, zero-trust access (IAP)</dd>
+    <dt>AI-assisted</dt><dd>Claude Code, multi-agent development workflows</dd>
+    <dt>Earlier stack</dt><dd>Windows Server, virtual desktop infrastructure, Crestron and BiAmp AV systems</dd>
+  </dl>
+</section>
+
+<section aria-labelledby="experience">
+  <h2 id="experience">Experience</h2>
+
+  <div class="job-group">
+    <div class="org"><h3>Healthcare video-interpreting startup</h3><span class="meta">Remote · Jun 2018 – Sep 2026</span></div>
+
+    <div class="job">
+      <div class="job-title"><span>Senior Infrastructure Engineer</span><span class="meta">Apr 2022 – Sep 2026</span></div>
+      <ul>
+        <li>Created and ran three non-production GKE clusters alongside production, each with its own Cloud SQL instance; one became a pre-production environment that replaced staging, refreshed with scrubbed production data and used by about 10 developers and 3–4 QA testers.</li>
+        <li>Delivered the infrastructure side of a company-wide SOC 2 effort, consolidating per-app ingresses into one GCP L7 load balancer with Cloud Armor WAF rules and rate limiting, and ran the annual backup-and-restore test used as audit evidence.</li>
+        <li>Took a Go AI gateway for LLM and speech providers into production on GKE from another team's Helm setup, then traced a production-only failure of real-time sessions to the load balancer's 30-second WebSocket cutoff and gave WebSockets a dedicated 60-minute backend.</li>
+        <li>Put self-hosted Airbyte behind Identity-Aware Proxy so the data engineering team could manage its own pipelines instead of routing every change through ops.</li>
+        <li>Tightened data freshness alerting after a hung sync froze reports for a weekend, adding a 12-hour no-new-data test; the alerts caught later stalls.</li>
+        <li>Took on an ERP integration spanning several systems new to the team, run with an AI orchestration workflow: one planning agent directing multiple Claude Code agents.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-title"><span>Software Engineer</span><span class="meta">Jun 2018 – Apr 2022</span></div>
+      <ul>
+        <li>Bootstrapped the company's container platform on Google Kubernetes Engine as a contractor, from first commit to production in about six weeks; its ops repo stayed in use through 2026.</li>
+        <li>Designed a git-driven ops workflow that cut developer setup to three tools (git, git-crypt, Docker), so any engineer could connect to an environment and deploy.</li>
+        <li>Rebuilt production Kubernetes on a private GKE cluster with Helm and Prometheus monitoring in about two weeks of hands-on work, and moved live traffic between clusters behind DNS with no downtime.</li>
+        <li>Built the platform's telephony layer in Go on Vonage APIs (Tokbox SIP, Nexmo Voice), delivered in four client-driven phases; it grew into a core, heavily used part of the platform.</li>
+        <li>Replaced manual reporting with a self-hosted ELT stack (Airbyte, BigQuery, dbt), choosing Airbyte over Singer, Meltano and Fivetran, and was sole dbt author for its first eight months.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job-group">
+    <div class="org"><h3>The University of Texas at Austin</h3><span class="meta">Austin, TX · Jul 2008 – Jun 2018</span></div>
+
+    <div class="job">
+      <div class="job-title"><span>Systems Administrator</span><span class="meta">Jul 2013 – Jun 2018</span></div>
+      <ul>
+        <li>Moved university computer labs from disk imaging to virtual desktops running on the existing lab hardware.</li>
+        <li>Engineered Crestron DigitalMedia AV systems for classrooms and labs, including BiAmp audio programming and Crestron SIMPL+ modules.</li>
+        <li>Administered Windows, macOS and Linux server environments: Active Directory and Group Policy, DNS and DHCP, patch management, rack servers and tape backup; automated routine work with PowerShell, Bash and VBScript.</li>
+        <li>Advised management on technology options and ran RFPs, vendor negotiations, purchasing and inventory.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-title"><span>Desktop Support Specialist</span><span class="meta">Jul 2008 – Jul 2013</span></div>
+      <ul>
+        <li>Managed university computer labs end to end, from unboxing and setup to keeping machines running for students.</li>
+        <li>Deployed lab-wide images with multicast imaging, including dual-boot images on Mac hardware, and troubleshot Crestron classroom AV systems.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="education">
+  <h2 id="education">Education &amp; Certifications</h2>
+  <ul>
+    <li><strong>A.A.S., Computer and Network Maintenance</strong>, Lee College, Baytown, TX · 2005 · GPA 3.96, Honor Society. Cisco networking curriculum; internship at ExxonMobil's global network operations center.</li>
+    <li><strong>CompTIA A+</strong> and <strong>CompTIA Network+</strong></li>
+  </ul>
+</section>
+
+<footer class="mono">uptime: 20 yrs · source on <a href="https://github.com/RKdev/resume">GitHub</a></footer>
+
+</div>
+</body>
+</html>
