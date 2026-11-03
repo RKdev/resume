@@ -20,7 +20,7 @@ Platform and infrastructure engineer with 20 years in technology, from server ra
 
 ## Experience
 
-### Healthcare video-interpreting startup · Remote · Jun 2018 – Sep 2026
+### Jeenie, Inc. · On-demand video interpreting platform for healthcare · Remote · Jun 2018 – Sep 2026
 
 **Senior Infrastructure Engineer** · Apr 2022 – Sep 2026
 
