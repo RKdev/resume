@@ -56,6 +56,6 @@ Platform and infrastructure engineer with 20 years in technology, from server ra
 ## Education & Certifications
 
 - **A.A.S., Computer Maintenance Technology**, Lee College, Baytown, TX · 2005 · Graduated with Honor, Phi Theta Kappa (Cisco networking curriculum)
-- **Internship:** ExxonMobil global network operations center (Lee College capstone) · 2004
+- **Internship:** ExxonMobil Global Operations Center (Lee College capstone) · May–Jul 2004 · Monitored and troubleshot global network circuits, worked with engineers to resolve site outages, and monitored daily backups of worldwide servers
 - **Certificates:** Networking Maintenance Technology and Computer Maintenance Technology, Lee College · 2004
 - **CompTIA A+** and **CompTIA Network+**
