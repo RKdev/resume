@@ -6,15 +6,16 @@ Johnson City, TN (open to remote) · [keys@novelbusiness.llc](mailto:keys@novelb
 
 ## Summary
 
-Platform and infrastructure engineer with 20 years in technology, from server racks to cloud-native platforms. Spent eight years as the one-person ops function at a healthcare video-interpreting startup: bootstrapped its Kubernetes platform on GCP, ran production through a private-cluster rebuild, a SOC 2 effort and a four-cluster fleet, and built its ELT data platform. Writes the code too, mainly backend services in Go. Lately building AI-assisted engineering workflows with Claude Code.
+Platform and infrastructure engineer with 20 years in technology, from server racks to cloud-native platforms. Spent eight years as the one-person ops function at a healthcare technology startup (HIPAA, SOC 2): bootstrapped and ran its Kubernetes platform on GCP, built and ran its ELT data platform, and wrote the Go services behind its telephony, payments and billing, including a NetSuite integration for roughly 2,000 clients. Lately building AI-assisted engineering workflows with Claude Code.
 
 ## Skills
 
 - **Platform:** Kubernetes (GKE), Docker, Helm, NGINX ingress, cert-manager, Prometheus, Grafana, Linux
 - **Google Cloud:** GKE, Cloud SQL, L7 load balancing, Cloud Armor, Identity-Aware Proxy, Compute Engine
-- **Data:** Airbyte, BigQuery, dbt, PostgreSQL, Redis, SQL
-- **Languages:** Go, Bash, SQL, JavaScript (Vue), PowerShell
-- **Security & compliance:** SOC 2 infrastructure controls, WAF and rate limiting, zero-trust access (IAP)
+- **Data:** Airbyte, BigQuery, dbt, Dagster, PostgreSQL, Redis, SQL, Looker Studio
+- **Payments & billing:** Stripe (payments and invoicing), Braintree/PayPal, usage-based billing, NetSuite ERP integration
+- **Languages:** Go, Python, Bash, SQL, JavaScript (Vue), PowerShell
+- **Security & compliance:** SOC 2 infrastructure controls, HIPAA (self-hosted internal tools), WAF and rate limiting, zero-trust access (IAP)
 - **AI-assisted engineering:** Claude Code, multi-agent development workflows
 - **Earlier stack:** Windows Server, virtual desktop infrastructure, Crestron and BiAmp AV systems
 
@@ -22,26 +23,29 @@ Platform and infrastructure engineer with 20 years in technology, from server ra
 
 ### Jeenie, Inc. · On-demand video interpreting platform for healthcare · Remote · Jun 2018 – Sep 2026
 
-**Senior Infrastructure Engineer** · Apr 2022 – Sep 2026
+**Senior Infrastructure Engineer (Platform / DevOps / SRE / Data Platform)** · Apr 2022 – Sep 2026
 
-- Created and ran three non-production GKE clusters alongside production, each with its own Cloud SQL instance; one became a pre-production environment that replaced staging, refreshed with scrubbed production data and used by about 10 developers and 3–4 QA testers.
+- Created and ran three non-production GKE clusters alongside production, each with its own Cloud SQL instance, handling deploys, upgrades and troubleshooting across the fleet; one became a pre-production environment that replaced staging, refreshed with scrubbed production data and used by about 10 developers and 3–4 QA testers.
 - Delivered the infrastructure side of a company-wide SOC 2 effort, consolidating per-app ingresses into one GCP L7 load balancer with Cloud Armor WAF rules and rate limiting, and ran the annual backup-and-restore test used as audit evidence.
+- Moved the company's Retool internal-tools platform to a HIPAA-compliant self-hosted deployment on GKE so it could serve larger healthcare providers, with git-versioned apps and a per-environment instance; built its billing and finance tools.
+- Built a three-layer, ERP-agnostic integration (dbt/BigQuery, Python/Dagster) that moved billing for roughly 2,000 clients onto NetSuite in about seven weeks from first commit to production invoicing, with idempotent writes, verify-after-write, dead-letter handling and reconciliation tests; run with a planning agent directing multiple Claude Code agents.
+- Ran monthly billing (Go, Stripe) for more than five years across roughly 2,000 clients, verifying each 2–5 day cycle and catching most billing errors before invoices went out.
 - Took a Go AI gateway for LLM and speech providers into production on GKE from another team's Helm setup, then traced a production-only failure of real-time sessions to the load balancer's 30-second WebSocket cutoff and gave WebSockets a dedicated 60-minute backend.
-- Put self-hosted Airbyte behind Identity-Aware Proxy so the data engineering team could manage its own pipelines instead of routing every change through ops.
-- Tightened data freshness alerting after a hung sync froze reports for a weekend, adding a 12-hour no-new-data test; the alerts caught later stalls.
-- Took on an ERP integration spanning several systems new to the team, run with an AI orchestration workflow: one planning agent directing multiple Claude Code agents.
+- Ran the company's Airbyte ELT pipeline, which fed finance, leadership and operations reporting, through 2026, moving new connectors to a Helm deploy on GKE, putting Airbyte behind Identity-Aware Proxy so the data team could manage its own pipelines, and adding a 12-hour no-new-calls freshness test after a hung sync froze reports for a weekend.
 
-**Software Engineer** · Jun 2018 – Apr 2022
+**Software Engineer (DevOps / Backend, Go / Data Engineering)** · Jun 2018 – Apr 2022
 
 - Bootstrapped the company's container platform on Google Kubernetes Engine as a contractor, from first commit to production in about six weeks; its ops repo stayed in use through 2026.
 - Designed a git-driven ops workflow that cut developer setup to three tools (git, git-crypt, Docker), so any engineer could connect to an environment and deploy.
 - Rebuilt production Kubernetes on a private GKE cluster with Helm and Prometheus monitoring in about two weeks of hands-on work, and moved live traffic between clusters behind DNS with no downtime.
-- Built the platform's telephony layer in Go on Vonage APIs (Tokbox SIP, Nexmo Voice), delivered in four client-driven phases; it grew into a core, heavily used part of the platform.
-- Replaced manual reporting with a self-hosted ELT stack (Airbyte, BigQuery, dbt), choosing Airbyte over Singer, Meltano and Fivetran, and was sole dbt author for its first eight months.
+- Built the platform's telephony layer in Go on Vonage APIs (Tokbox SIP, Nexmo Voice), connecting it to hospital, state-agency and call-center phone systems in four client-driven phases; phone and rollover grew to an estimated quarter or more of platform usage by 2026.
+- Added PayPal alongside Stripe by integrating Braintree's GraphQL API from Go (live in about three weeks, in production for more than six years), and built prepaid minute packages and overage billing full-stack in Go and Vue.
+- Replaced a hand-run morning report with a Go pipeline refreshing leadership's usage and revenue sheet every 15 minutes, the data source for board, investor and quarterly reporting.
+- Replaced manual reporting with a self-hosted ELT stack (Airbyte, BigQuery, dbt), choosing Airbyte over Singer, Meltano and Fivetran, and built the dbt financial model that moved the company to accrual accounting ahead of its Series A, signed off by an outside accounting firm.
 
 ### The University of Texas at Austin · Austin, TX · Jul 2008 – Jun 2018
 
-**Systems Administrator** · Jul 2013 – Jun 2018
+**Systems Administrator (Systems Engineer / IT Infrastructure)** · Jul 2013 – Jun 2018
 
 - Moved university computer labs from disk imaging to virtual desktops running on the existing lab hardware.
 - Engineered Crestron DigitalMedia AV systems for classrooms and labs, including BiAmp audio programming and Crestron SIMPL+ modules.
