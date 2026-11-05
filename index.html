@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>James Keys · Platform / DevOps Engineer</title>
-<meta name="description" content="James Keys: platform and infrastructure engineer. Kubernetes, GCP, Go and data pipelines, from server racks to cloud platforms.">
+<meta name="description" content="James Keys: Platform / DevOps engineer. Kubernetes on GCP, Go, data platforms, and payments and billing systems for a HIPAA-regulated healthcare platform.">
 <meta property="og:title" content="James Keys · Platform / DevOps Engineer">
-<meta property="og:description" content="Kubernetes · GCP · Go · Data Pipelines. From server racks to cloud platforms.">
+<meta property="og:description" content="Kubernetes · GCP · Go · Data Platforms · Payments &amp; Billing. HIPAA and SOC 2 environments.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -97,7 +97,7 @@ footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 3
 <header>
   <p class="prompt mono">$ whoami</p>
   <h1>James Keys</h1>
-  <p class="role">Platform &amp; Infrastructure Engineer</p>
+  <p class="role">Platform / DevOps Engineer</p>
   <p class="stack mono">Kubernetes · GCP · Go · Data Pipelines</p>
   <div class="contact">
     <span>Johnson City, TN · open to remote</span>
@@ -114,7 +114,7 @@ footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 3
 
 <section aria-labelledby="summary">
   <h2 id="summary">Summary</h2>
-  <p>Platform and infrastructure engineer with 20 years in technology, from server racks to cloud-native platforms. Spent eight years as the one-person ops function at a healthcare video-interpreting startup: bootstrapped its Kubernetes platform on GCP, ran production through a private-cluster rebuild, a SOC 2 effort and a four-cluster fleet, and built its ELT data platform. Writes the code too, mainly backend services in Go. Lately building AI-assisted engineering workflows with Claude Code.</p>
+  <p>Platform and infrastructure engineer with 20 years in technology, from server racks to cloud-native platforms. Spent eight years as the one-person ops function at a healthcare technology startup (HIPAA, SOC 2): bootstrapped and ran its Kubernetes platform on GCP, built and ran its ELT data platform, and wrote the Go services behind its telephony, payments and billing, including a NetSuite integration for roughly 2,000 clients. Lately building AI-assisted engineering workflows with Claude Code.</p>
 </section>
 
 <section aria-labelledby="skills">
@@ -122,9 +122,10 @@ footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 3
   <dl class="skills">
     <dt>Platform</dt><dd>Kubernetes (GKE), Docker, Helm, NGINX ingress, cert-manager, Prometheus, Grafana, Linux</dd>
     <dt>Google Cloud</dt><dd>GKE, Cloud SQL, L7 load balancing, Cloud Armor, Identity-Aware Proxy, Compute Engine</dd>
-    <dt>Data</dt><dd>Airbyte, BigQuery, dbt, PostgreSQL, Redis, SQL</dd>
-    <dt>Languages</dt><dd>Go, Bash, SQL, JavaScript (Vue), PowerShell</dd>
-    <dt>Security</dt><dd>SOC 2 infrastructure controls, WAF and rate limiting, zero-trust access (IAP)</dd>
+    <dt>Data</dt><dd>Airbyte, BigQuery, dbt, Dagster, PostgreSQL, Redis, SQL, Looker Studio</dd>
+    <dt>Payments &amp; billing</dt><dd>Stripe (payments and invoicing), Braintree/PayPal, usage-based billing, NetSuite ERP integration</dd>
+    <dt>Languages</dt><dd>Go, Python, Bash, SQL, JavaScript (Vue), PowerShell</dd>
+    <dt>Security</dt><dd>SOC 2 infrastructure controls, HIPAA (self-hosted internal tools), WAF and rate limiting, zero-trust access (IAP)</dd>
     <dt>AI-assisted</dt><dd>Claude Code, multi-agent development workflows</dd>
     <dt>Earlier stack</dt><dd>Windows Server, virtual desktop infrastructure, Crestron and BiAmp AV systems</dd>
   </dl>
@@ -137,25 +138,28 @@ footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 3
     <div class="org"><h3>Jeenie, Inc.</h3><span class="meta">On-demand video interpreting platform for healthcare · Remote · Jun 2018 – Sep 2026</span></div>
 
     <div class="job">
-      <div class="job-title"><span>Senior Infrastructure Engineer</span><span class="meta">Apr 2022 – Sep 2026</span></div>
+      <div class="job-title"><span>Senior Infrastructure Engineer (Platform / DevOps / SRE / Data Platform)</span><span class="meta">Apr 2022 – Sep 2026</span></div>
       <ul>
-        <li>Created and ran three non-production GKE clusters alongside production, each with its own Cloud SQL instance; one became a pre-production environment that replaced staging, refreshed with scrubbed production data and used by about 10 developers and 3–4 QA testers.</li>
+        <li>Created and ran three non-production GKE clusters alongside production, each with its own Cloud SQL instance, handling deploys, upgrades and troubleshooting across the fleet; one became a pre-production environment that replaced staging, refreshed with scrubbed production data and used by about 10 developers and 3–4 QA testers.</li>
         <li>Delivered the infrastructure side of a company-wide SOC 2 effort, consolidating per-app ingresses into one GCP L7 load balancer with Cloud Armor WAF rules and rate limiting, and ran the annual backup-and-restore test used as audit evidence.</li>
+        <li>Moved the company's Retool internal-tools platform to a HIPAA-compliant self-hosted deployment on GKE so it could serve larger healthcare providers, with git-versioned apps and a per-environment instance; built its billing and finance tools.</li>
+        <li>Built a three-layer, ERP-agnostic integration (dbt/BigQuery, Python/Dagster) that moved billing for roughly 2,000 clients onto NetSuite in about seven weeks from first commit to production invoicing, with idempotent writes, verify-after-write, dead-letter handling and reconciliation tests; run with a planning agent directing multiple Claude Code agents.</li>
+        <li>Ran monthly billing (Go, Stripe) for more than five years across roughly 2,000 clients, verifying each 2–5 day cycle and catching most billing errors before invoices went out.</li>
         <li>Took a Go AI gateway for LLM and speech providers into production on GKE from another team's Helm setup, then traced a production-only failure of real-time sessions to the load balancer's 30-second WebSocket cutoff and gave WebSockets a dedicated 60-minute backend.</li>
-        <li>Put self-hosted Airbyte behind Identity-Aware Proxy so the data engineering team could manage its own pipelines instead of routing every change through ops.</li>
-        <li>Tightened data freshness alerting after a hung sync froze reports for a weekend, adding a 12-hour no-new-data test; the alerts caught later stalls.</li>
-        <li>Took on an ERP integration spanning several systems new to the team, run with an AI orchestration workflow: one planning agent directing multiple Claude Code agents.</li>
+        <li>Ran the company's Airbyte ELT pipeline, which fed finance, leadership and operations reporting, through 2026, moving new connectors to a Helm deploy on GKE, putting Airbyte behind Identity-Aware Proxy so the data team could manage its own pipelines, and adding a 12-hour no-new-calls freshness test after a hung sync froze reports for a weekend.</li>
       </ul>
     </div>
 
     <div class="job">
-      <div class="job-title"><span>Software Engineer</span><span class="meta">Jun 2018 – Apr 2022</span></div>
+      <div class="job-title"><span>Software Engineer (DevOps / Backend, Go / Data Engineering)</span><span class="meta">Jun 2018 – Apr 2022</span></div>
       <ul>
         <li>Bootstrapped the company's container platform on Google Kubernetes Engine as a contractor, from first commit to production in about six weeks; its ops repo stayed in use through 2026.</li>
         <li>Designed a git-driven ops workflow that cut developer setup to three tools (git, git-crypt, Docker), so any engineer could connect to an environment and deploy.</li>
         <li>Rebuilt production Kubernetes on a private GKE cluster with Helm and Prometheus monitoring in about two weeks of hands-on work, and moved live traffic between clusters behind DNS with no downtime.</li>
-        <li>Built the platform's telephony layer in Go on Vonage APIs (Tokbox SIP, Nexmo Voice), delivered in four client-driven phases; it grew into a core, heavily used part of the platform.</li>
-        <li>Replaced manual reporting with a self-hosted ELT stack (Airbyte, BigQuery, dbt), choosing Airbyte over Singer, Meltano and Fivetran, and was sole dbt author for its first eight months.</li>
+        <li>Built the platform's telephony layer in Go on Vonage APIs (Tokbox SIP, Nexmo Voice), connecting it to hospital, state-agency and call-center phone systems in four client-driven phases; phone and rollover grew to an estimated quarter or more of platform usage by 2026.</li>
+        <li>Added PayPal alongside Stripe by integrating Braintree's GraphQL API from Go (live in about three weeks, in production for more than six years), and built prepaid minute packages and overage billing full-stack in Go and Vue.</li>
+        <li>Replaced a hand-run morning report with a Go pipeline refreshing leadership's usage and revenue sheet every 15 minutes, the data source for board, investor and quarterly reporting.</li>
+        <li>Replaced manual reporting with a self-hosted ELT stack (Airbyte, BigQuery, dbt), choosing Airbyte over Singer, Meltano and Fivetran, and built the dbt financial model that moved the company to accrual accounting ahead of its Series A, signed off by an outside accounting firm.</li>
       </ul>
     </div>
   </div>
@@ -164,7 +168,7 @@ footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 3
     <div class="org"><h3>The University of Texas at Austin</h3><span class="meta">Austin, TX · Jul 2008 – Jun 2018</span></div>
 
     <div class="job">
-      <div class="job-title"><span>Systems Administrator</span><span class="meta">Jul 2013 – Jun 2018</span></div>
+      <div class="job-title"><span>Systems Administrator (Systems Engineer / IT Infrastructure)</span><span class="meta">Jul 2013 – Jun 2018</span></div>
       <ul>
         <li>Moved university computer labs from disk imaging to virtual desktops running on the existing lab hardware.</li>
         <li>Engineered Crestron DigitalMedia AV systems for classrooms and labs, including BiAmp audio programming and Crestron SIMPL+ modules.</li>
