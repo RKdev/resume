@@ -127,7 +127,7 @@ footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 3
 <section aria-labelledby="skills">
   <h2 id="skills">Skills</h2>
   <dl class="skills">
-    <dt>Platform</dt><dd>Kubernetes (GKE), Docker, Helm, NGINX ingress, cert-manager, Prometheus, Grafana, Linux</dd>
+    <dt>Platform</dt><dd>Kubernetes (GKE), Docker, Helm, NGINX ingress, cert-manager, Prometheus, Grafana, Linux, Terraform, ArgoCD</dd>
     <dt>Google Cloud</dt><dd>GKE, Cloud SQL, L7 load balancing, Cloud Armor, Identity-Aware Proxy, Compute Engine</dd>
     <dt>Data</dt><dd>Airbyte, BigQuery, dbt, Dagster, PostgreSQL, Redis, SQL, Looker Studio</dd>
     <dt>Payments &amp; billing</dt><dd>Stripe (payments and invoicing), Braintree/PayPal, usage-based billing, NetSuite ERP integration</dd>
@@ -154,6 +154,7 @@ footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 3
         <li>Ran monthly billing (Go, Stripe) for more than five years across roughly 2,000 clients, verifying each 2–5 day cycle and catching most billing errors before invoices went out.</li>
         <li>Took a Go AI gateway for LLM and speech providers into production on GKE from another team's Helm setup, then traced a production-only failure of real-time sessions to the load balancer's 30-second WebSocket cutoff and gave WebSockets a dedicated 60-minute backend.</li>
         <li>Ran the company's Airbyte ELT pipeline, which fed finance, leadership and operations reporting, through 2026, moving new connectors to a Helm deploy on GKE, putting Airbyte behind Identity-Aware Proxy so the data team could manage its own pipelines, and adding a 12-hour no-new-calls freshness test after a hung sync froze reports for a weekend.</li>
+        <li>Wrote Terraform for data-platform infrastructure on GCP (Cloud SQL, service accounts with Workload Identity, IAM, Secret Manager, BigQuery datasets, IAP access) in a shared IaC repo, including two standalone projects with their own remote state; planned and applied changes from the command line through pull requests; deployed the matching services with Argo CD (Helm, External Secrets, Gateway API).</li>
       </ul>
     </div>
 
