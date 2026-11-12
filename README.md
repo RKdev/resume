@@ -10,7 +10,7 @@ Platform and infrastructure engineer with 20 years in technology, from server ra
 
 ## Skills
 
-- **Platform:** Kubernetes (GKE), Docker, Helm, NGINX ingress, cert-manager, Prometheus, Grafana, Linux
+- **Platform:** Kubernetes (GKE), Docker, Helm, NGINX ingress, cert-manager, Prometheus, Grafana, Linux, Terraform, ArgoCD
 - **Google Cloud:** GKE, Cloud SQL, L7 load balancing, Cloud Armor, Identity-Aware Proxy, Compute Engine
 - **Data:** Airbyte, BigQuery, dbt, Dagster, PostgreSQL, Redis, SQL, Looker Studio
 - **Payments & billing:** Stripe (payments and invoicing), Braintree/PayPal, usage-based billing, NetSuite ERP integration
@@ -32,6 +32,7 @@ Platform and infrastructure engineer with 20 years in technology, from server ra
 - Ran monthly billing (Go, Stripe) for more than five years across roughly 2,000 clients, verifying each 2–5 day cycle and catching most billing errors before invoices went out.
 - Took a Go AI gateway for LLM and speech providers into production on GKE from another team's Helm setup, then traced a production-only failure of real-time sessions to the load balancer's 30-second WebSocket cutoff and gave WebSockets a dedicated 60-minute backend.
 - Ran the company's Airbyte ELT pipeline, which fed finance, leadership and operations reporting, through 2026, moving new connectors to a Helm deploy on GKE, putting Airbyte behind Identity-Aware Proxy so the data team could manage its own pipelines, and adding a 12-hour no-new-calls freshness test after a hung sync froze reports for a weekend.
+- Wrote Terraform for data-platform infrastructure on GCP (Cloud SQL, service accounts with Workload Identity, IAM, Secret Manager, BigQuery datasets, IAP access) in a shared IaC repo, including two standalone projects with their own remote state; planned and applied changes from the command line through pull requests; deployed the matching services with Argo CD (Helm, External Secrets, Gateway API).
 
 **Software Engineer (DevOps / Backend, Go / Data Engineering)** · Jun 2018 – Apr 2022
 
